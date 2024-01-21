@@ -1,9 +1,22 @@
+import 'package:digi_ration_shop_owner_application/profile_screen/core/utils/pref_utils.dart';
 import 'package:flutter/material.dart';
-import './profile_screen/profile_main.dart';
+import 'package:flutter/services.dart';
+import './profile_screen/profile_screen.dart';
+
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Future.wait([
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]),
+    PrefUtils().init()
+  ]).then((value) {
+      runApp(const profile_screen());
+    }
+  });
   //profile_main.
-  runApp(profile_main());
+  // runApp(profile_screen());
 }
 
 // class MyApp extends StatelessWidget {
