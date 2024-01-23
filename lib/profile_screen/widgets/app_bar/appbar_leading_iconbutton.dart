@@ -1,17 +1,16 @@
+import 'package:digi_ration_shop_owner_application/profile_screen/core/utils/size_utils.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/widgets/custom_image_view.dart';
 import 'package:flutter/material.dart';
-import 'package:profilescreen/core/app_export.dart';
-import 'package:profilescreen/widgets/custom_icon_button.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/widgets/custom_icon_button.dart';
 
 // ignore: must_be_immutable
 class AppbarLeadingIconbutton extends StatelessWidget {
   AppbarLeadingIconbutton({
-    Key? key,
+    super.key,
     this.imagePath,
     this.margin,
     this.onTap,
-  }) : super(
-          key: key,
-        );
+  });
 
   String? imagePath;
 
@@ -31,7 +30,7 @@ class AppbarLeadingIconbutton extends StatelessWidget {
           height: 40.v,
           width: 48.h,
           child: CustomImageView(
-            imagePath: ImageConstant.imgRectangle5,
+            imagePath: imagePath,
           ),
         ),
       ),

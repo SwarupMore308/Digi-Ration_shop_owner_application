@@ -1,21 +1,31 @@
+import 'package:digi_ration_shop_owner_application/profile_screen/core/utils/navigator_service.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/core/utils/size_utils.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/localization/app_localization.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/routes/app_routes.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/theme/app_decoration.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/theme/theme_helper.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/widgets/custom_image_view.dart';
+
 import 'bloc/profilescreen_bloc.dart';
 import 'models/profilescreen_model.dart';
 import 'package:flutter/material.dart';
-import 'package:profilescreen/core/app_export.dart';
-import 'package:profilescreen/widgets/app_bar/appbar_leading_iconbutton.dart';
-import 'package:profilescreen/widgets/app_bar/appbar_trailing_image.dart';
-import 'package:profilescreen/widgets/app_bar/custom_app_bar.dart';
-import 'package:profilescreen/widgets/custom_elevated_button.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/core/app_export.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/widgets/app_bar/appbar_leading_iconbutton.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/widgets/app_bar/appbar_trailing_image.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/widgets/app_bar/custom_app_bar.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/widgets/custom_elevated_button.dart';
 
 class ProfilescreenScreen extends StatelessWidget {
-  const ProfilescreenScreen({Key? key}) : super(key: key);
+  const ProfilescreenScreen({super.key});
 
   static Widget builder(BuildContext context) {
     return BlocProvider<ProfilescreenBloc>(
         create: (context) => ProfilescreenBloc(
-            ProfilescreenState(profilescreenModelObj: ProfilescreenModel()))
-          ..add(ProfilescreenInitialEvent()),
-        child: ProfilescreenScreen());
+              ProfilescreenState(profilescreenModelObj: ProfilescreenModel()),
+            ),
+        // ProfilescreenState(profilescreenModelObj: ProfilescreenModel()))
+        // .add(ProfilescreenInitialEvent())
+        child: const ProfilescreenScreen());
   }
 
   @override
@@ -88,7 +98,7 @@ class ProfilescreenScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
-                            Spacer(),
+                            const Spacer(),
                             Padding(
                                 padding: EdgeInsets.only(left: 3.h),
                                 child: RichText(
@@ -96,7 +106,7 @@ class ProfilescreenScreen extends StatelessWidget {
                                       TextSpan(
                                           text: "lbl_full_name".tr,
                                           style: theme.textTheme.titleLarge),
-                                      TextSpan(text: " "),
+                                      const TextSpan(text: " "),
                                       TextSpan(
                                           text: "lbl_ramesh_sharma".tr,
                                           style: theme.textTheme.bodyLarge)
@@ -110,7 +120,7 @@ class ProfilescreenScreen extends StatelessWidget {
                                       TextSpan(
                                           text: "lbl_adress".tr,
                                           style: theme.textTheme.titleLarge),
-                                      TextSpan(text: " "),
+                                      const TextSpan(text: " "),
                                       TextSpan(
                                           text: "lbl_india".tr,
                                           style: theme.textTheme.bodyLarge)
@@ -124,7 +134,7 @@ class ProfilescreenScreen extends StatelessWidget {
                                       TextSpan(
                                           text: "lbl_phone_no".tr,
                                           style: theme.textTheme.titleLarge),
-                                      TextSpan(text: " "),
+                                      const TextSpan(text: " "),
                                       TextSpan(
                                           text: "lbl_91_122xxxx090".tr,
                                           style: theme.textTheme.bodyLarge)
@@ -138,7 +148,7 @@ class ProfilescreenScreen extends StatelessWidget {
                                       TextSpan(
                                           text: "lbl_aadhar".tr,
                                           style: theme.textTheme.titleLarge),
-                                      TextSpan(text: " "),
+                                      const TextSpan(text: " "),
                                       TextSpan(
                                           text: "lbl_xxxxxxxx1234".tr,
                                           style: theme.textTheme.bodyLarge)
@@ -152,7 +162,7 @@ class ProfilescreenScreen extends StatelessWidget {
                                       TextSpan(
                                           text: "msg_ben_id2".tr,
                                           style: theme.textTheme.titleLarge),
-                                      TextSpan(text: " "),
+                                      const TextSpan(text: " "),
                                       TextSpan(
                                           text: "lbl_b1120".tr,
                                           style: theme.textTheme.bodyLarge)
@@ -166,7 +176,7 @@ class ProfilescreenScreen extends StatelessWidget {
                                       TextSpan(
                                           text: "lbl_members".tr,
                                           style: theme.textTheme.titleLarge),
-                                      TextSpan(text: " "),
+                                      const TextSpan(text: " "),
                                       TextSpan(
                                           text: "lbl_4".tr,
                                           style: theme.textTheme.bodyLarge)
@@ -180,7 +190,7 @@ class ProfilescreenScreen extends StatelessWidget {
                                       TextSpan(
                                           text: "lbl_distributor".tr,
                                           style: theme.textTheme.titleLarge),
-                                      TextSpan(text: " "),
+                                      const TextSpan(text: " "),
                                       TextSpan(
                                           text: "msg_mr_a_s_choudhary".tr,
                                           style: theme.textTheme.bodyLarge)
@@ -194,7 +204,7 @@ class ProfilescreenScreen extends StatelessWidget {
                                       TextSpan(
                                           text: "lbl_adress2".tr,
                                           style: theme.textTheme.titleLarge),
-                                      TextSpan(text: " "),
+                                      const TextSpan(text: " "),
                                       TextSpan(
                                           text: "lbl_india2".tr,
                                           style: theme.textTheme.bodyLarge)
@@ -208,7 +218,7 @@ class ProfilescreenScreen extends StatelessWidget {
                                       TextSpan(
                                           text: "msg_dist_id2".tr,
                                           style: theme.textTheme.titleLarge),
-                                      TextSpan(text: " "),
+                                      const TextSpan(text: " "),
                                       TextSpan(
                                           text: "lbl_ac11034".tr,
                                           style: theme.textTheme.bodyLarge)

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:profilescreen/core/app_export.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/core/app_export.dart';
 
 class ProgressDialogUtils {
   static bool isProgressVisible = false;

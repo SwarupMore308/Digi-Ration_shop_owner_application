@@ -1,19 +1,19 @@
-import 'dart:ui';
+import 'package:digi_ration_shop_owner_application/profile_screen/core/utils/pref_utils.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/core/utils/size_utils.dart';
 import 'package:flutter/material.dart';
-import '../../core/app_export.dart';
 
 /// Helper class for managing themes and colors.
 class ThemeHelper {
   // The current app theme
-  var _appTheme = PrefUtils().getThemeData();
+  final _appTheme = PrefUtils().getThemeData();
 
 // A map of custom color themes supported by the app
-  Map<String, PrimaryColors> _supportedCustomColor = {
+  final Map<String, PrimaryColors> _supportedCustomColor = {
     'primary': PrimaryColors()
   };
 
 // A map of color schemes supported by the app
-  Map<String, ColorScheme> _supportedColorScheme = {
+  final Map<String, ColorScheme> _supportedColorScheme = {
     'primary': ColorSchemes.primaryColorScheme
   };
 

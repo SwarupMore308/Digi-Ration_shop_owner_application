@@ -1,21 +1,23 @@
+import 'package:digi_ration_shop_owner_application/profile_screen/core/utils/navigator_service.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/core/utils/size_utils.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/localization/app_localization.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/routes/app_routes.dart';
+
 import 'bloc/app_navigation_bloc.dart';
 import 'models/app_navigation_model.dart';
 import 'package:flutter/material.dart';
-import 'package:profilescreen/core/app_export.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/core/app_export.dart';
 
 class AppNavigationScreen extends StatelessWidget {
-  const AppNavigationScreen({Key? key})
-      : super(
-          key: key,
-        );
+  const AppNavigationScreen({super.key});
 
   static Widget builder(BuildContext context) {
     return BlocProvider<AppNavigationBloc>(
       create: (context) => AppNavigationBloc(AppNavigationState(
-        appNavigationModelObj: AppNavigationModel(),
+        appNavigationModelObj: const AppNavigationModel(),
       ))
         ..add(AppNavigationInitialEvent()),
-      child: AppNavigationScreen(),
+      child: const AppNavigationScreen(),
     );
   }
 
@@ -25,7 +27,7 @@ class AppNavigationScreen extends StatelessWidget {
       builder: (context, state) {
         return SafeArea(
           child: Scaffold(
-            backgroundColor: Color(0XFFFFFFFF),
+            backgroundColor: const Color(0XFFFFFFFF),
             body: SizedBox(
               width: 375.h,
               child: Column(
@@ -34,7 +36,7 @@ class AppNavigationScreen extends StatelessWidget {
                   Expanded(
                     child: SingleChildScrollView(
                       child: Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Color(0XFFFFFFFF),
                         ),
                         child: Column(
@@ -75,7 +77,7 @@ class AppNavigationScreen extends StatelessWidget {
   /// Section Widget
   Widget _buildAppNavigation(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Color(0XFFFFFFFF),
       ),
       child: Column(
@@ -89,7 +91,7 @@ class AppNavigationScreen extends StatelessWidget {
                 "App Navigation".tr,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Color(0XFF000000),
+                  color: const Color(0XFF000000),
                   fontSize: 20.fSize,
                   fontFamily: 'Roboto',
                   fontWeight: FontWeight.w400,
@@ -107,7 +109,7 @@ class AppNavigationScreen extends StatelessWidget {
                     .tr,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Color(0XFF888888),
+                  color: const Color(0XFF888888),
                   fontSize: 16.fSize,
                   fontFamily: 'Roboto',
                   fontWeight: FontWeight.w400,
@@ -119,7 +121,7 @@ class AppNavigationScreen extends StatelessWidget {
           Divider(
             height: 1.v,
             thickness: 1.v,
-            color: Color(0XFF000000),
+            color: const Color(0XFF000000),
           ),
         ],
       ),
@@ -137,7 +139,7 @@ class AppNavigationScreen extends StatelessWidget {
         onTapScreenTitle!.call();
       },
       child: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Color(0XFFFFFFFF),
         ),
         child: Column(
@@ -151,7 +153,7 @@ class AppNavigationScreen extends StatelessWidget {
                   screenTitle,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: Color(0XFF000000),
+                    color: const Color(0XFF000000),
                     fontSize: 20.fSize,
                     fontFamily: 'Roboto',
                     fontWeight: FontWeight.w400,
@@ -164,7 +166,7 @@ class AppNavigationScreen extends StatelessWidget {
             Divider(
               height: 1.v,
               thickness: 1.v,
-              color: Color(0XFF888888),
+              color: const Color(0XFF888888),
             ),
           ],
         ),

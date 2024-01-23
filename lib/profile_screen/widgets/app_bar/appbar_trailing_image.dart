@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:profilescreen/core/app_export.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/core/app_export.dart';
 
 // ignore: must_be_immutable
 class AppbarTrailingImage extends StatelessWidget {
   AppbarTrailingImage({
-    Key? key,
+    super.key,
     this.imagePath,
     this.margin,
     this.onTap,
-  }) : super(
-          key: key,
-        );
+  });
 
   String? imagePath;
 

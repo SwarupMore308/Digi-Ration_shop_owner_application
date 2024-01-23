@@ -1,4 +1,5 @@
-import 'dart:ui' as ui;
+// ignore_for_file: constant_identifier_names
+
 import 'package:flutter/material.dart';
 
 // These are the Viewport values of your Figma Design.
@@ -14,9 +15,9 @@ typedef ResponsiveBuild = Widget Function(
 
 class Sizer extends StatelessWidget {
   const Sizer({
-    Key? key,
+    super.key,
     required this.builder,
-  }) : super(key: key);
+  });
 
   /// Builds the widget whenever the orientation changes.
   final ResponsiveBuild builder;

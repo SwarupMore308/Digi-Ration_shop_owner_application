@@ -1,6 +1,6 @@
 class ImageConstant {
   // Image folder path
-  static String imagePath = 'assets/images';
+  static String imagePath = '/assets/images';
 
   // ProfileScreen images
   static String imgRectangle5 = '$imagePath/img_rectangle_5.png';
@@ -31,5 +31,5 @@ class ImageConstant {
   // DropDown Profile images
   static String imgEllipse958x69 = '$imagePath/img_ellipse_9_58x69.png';
 
-  static String imageNotFound = 'assets/images/image_not_found.png';
+  static String imageNotFound = '$imagePath/image_not_found.png';
 }

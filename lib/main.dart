@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import './profile_screen/profile_screen.dart';
 
-
+var globalMessengerKey = GlobalKey<ScaffoldMessengerState>();
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   Future.wait([
@@ -12,9 +12,9 @@ void main() {
     ]),
     PrefUtils().init()
   ]).then((value) {
-      runApp(const profile_screen());
-    }
+    runApp(const profile_screen());
   });
+
   //profile_main.
   // runApp(profile_screen());
 }

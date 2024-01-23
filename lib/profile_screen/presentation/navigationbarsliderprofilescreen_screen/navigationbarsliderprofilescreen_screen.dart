@@ -1,20 +1,29 @@
+import 'package:digi_ration_shop_owner_application/profile_screen/core/utils/image_constant.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/core/utils/navigator_service.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/core/utils/size_utils.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/localization/app_localization.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/routes/app_routes.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/theme/app_decoration.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/theme/theme_helper.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/widgets/custom_image_view.dart';
+
 import 'bloc/navigationbarsliderprofilescreen_bloc.dart';
 import 'models/navigationbarsliderprofilescreen_model.dart';
 import 'package:flutter/material.dart';
-import 'package:profilescreen/core/app_export.dart';
-import 'package:profilescreen/widgets/custom_elevated_button.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/core/app_export.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/widgets/custom_elevated_button.dart';
 
 class NavigationbarsliderprofilescreenScreen extends StatelessWidget {
-  const NavigationbarsliderprofilescreenScreen({Key? key}) : super(key: key);
+  const NavigationbarsliderprofilescreenScreen({super.key});
 
   static Widget builder(BuildContext context) {
     return BlocProvider<NavigationbarsliderprofilescreenBloc>(
         create: (context) => NavigationbarsliderprofilescreenBloc(
             NavigationbarsliderprofilescreenState(
                 navigationbarsliderprofilescreenModelObj:
-                    NavigationbarsliderprofilescreenModel()))
+                    const NavigationbarsliderprofilescreenModel()))
           ..add(NavigationbarsliderprofilescreenInitialEvent()),
-        child: NavigationbarsliderprofilescreenScreen());
+        child: const NavigationbarsliderprofilescreenScreen());
   }
 
   @override
@@ -79,7 +88,7 @@ class NavigationbarsliderprofilescreenScreen extends StatelessWidget {
                         padding: EdgeInsets.symmetric(horizontal: 10.h),
                         child:
                             _buildProfileRow(context, profile: "lbl_about".tr)),
-                    Spacer(),
+                    const Spacer(),
                     CustomElevatedButton(
                         height: 32.v,
                         width: 118.h,

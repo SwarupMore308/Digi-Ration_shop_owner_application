@@ -1,7 +1,8 @@
+import 'package:digi_ration_shop_owner_application/profile_screen/core/utils/navigator_service.dart';
+
 import 'en_us/en_us_translations.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/cupertino.dart';
-import '../core/app_export.dart';
 
 class AppLocalization {
   AppLocalization(this.locale);

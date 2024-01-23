@@ -1,5 +1,6 @@
+import 'package:digi_ration_shop_owner_application/profile_screen/core/utils/size_utils.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/theme/theme_helper.dart';
 import 'package:flutter/material.dart';
-import 'package:profilescreen/core/app_export.dart';
 
 class AppDecoration {
   // Fill decorations
@@ -20,7 +21,7 @@ class AppDecoration {
             color: appTheme.black900.withOpacity(0.25),
             spreadRadius: 2.h,
             blurRadius: 2.h,
-            offset: Offset(
+            offset: const Offset(
               0,
               4,
             ),
@@ -34,7 +35,7 @@ class AppDecoration {
             color: appTheme.black900.withOpacity(0.25),
             spreadRadius: 2.h,
             blurRadius: 2.h,
-            offset: Offset(
+            offset: const Offset(
               0,
               4,
             ),
@@ -48,7 +49,7 @@ class AppDecoration {
             color: appTheme.black900.withOpacity(0.25),
             spreadRadius: 2.h,
             blurRadius: 2.h,
-            offset: Offset(
+            offset: const Offset(
               0,
               4,
             ),

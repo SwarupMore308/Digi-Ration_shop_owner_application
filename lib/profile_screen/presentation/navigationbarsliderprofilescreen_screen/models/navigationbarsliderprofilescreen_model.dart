@@ -5,10 +5,10 @@ import 'package:equatable/equatable.dart';
 /// This class defines the variables used in the [navigationbarsliderprofilescreen_screen],
 /// and is typically used to hold data that is passed between different parts of the application.
 class NavigationbarsliderprofilescreenModel extends Equatable {
-  NavigationbarsliderprofilescreenModel() {}
+  const NavigationbarsliderprofilescreenModel();
 
   NavigationbarsliderprofilescreenModel copyWith() {
-    return NavigationbarsliderprofilescreenModel();
+    return const NavigationbarsliderprofilescreenModel();
   }
 
   @override

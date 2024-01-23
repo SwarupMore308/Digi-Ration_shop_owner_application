@@ -1,7 +1,7 @@
+import 'package:digi_ration_shop_owner_application/profile_screen/presentation/navigationbarsliderprofilescreen_screen/models/navigationbarsliderprofilescreen_model.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
-import '/core/app_export.dart';
-import 'package:profilescreen/presentation/navigationbarsliderprofilescreen_screen/models/navigationbarsliderprofilescreen_model.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/core/app_export.dart';
 part 'navigationbarsliderprofilescreen_event.dart';
 part 'navigationbarsliderprofilescreen_state.dart';
 
@@ -9,9 +9,7 @@ part 'navigationbarsliderprofilescreen_state.dart';
 class NavigationbarsliderprofilescreenBloc extends Bloc<
     NavigationbarsliderprofilescreenEvent,
     NavigationbarsliderprofilescreenState> {
-  NavigationbarsliderprofilescreenBloc(
-      NavigationbarsliderprofilescreenState initialState)
-      : super(initialState) {
+  NavigationbarsliderprofilescreenBloc(super.initialState) {
     on<NavigationbarsliderprofilescreenInitialEvent>(_onInitialize);
   }
 

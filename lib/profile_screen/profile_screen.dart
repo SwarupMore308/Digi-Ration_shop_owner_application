@@ -1,8 +1,12 @@
+import 'package:digi_ration_shop_owner_application/profile_screen/core/utils/navigator_service.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/core/utils/pref_utils.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/localization/app_localization.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/routes/app_routes.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/theme/theme_helper.dart';
+
 import 'core/app_export.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'core/utils/size_utils.dart';
 
@@ -27,13 +31,13 @@ class profile_screen extends StatelessWidget {
                 title: 'profilescreen',
                 navigatorKey: NavigatorService.navigatorKey,
                 debugShowCheckedModeBanner: false,
-                localizationsDelegates: [
+                localizationsDelegates: const [
                   AppLocalizationDelegate(),
                   GlobalMaterialLocalizations.delegate,
                   GlobalWidgetsLocalizations.delegate,
                   GlobalCupertinoLocalizations.delegate,
                 ],
-                supportedLocales: [
+                supportedLocales: const [
                   Locale(
                     'en',
                     '',

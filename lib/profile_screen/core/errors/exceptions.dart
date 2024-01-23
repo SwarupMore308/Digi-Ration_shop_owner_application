@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:profilescreen/main.dart';
+import 'package:digi_ration_shop_owner_application/main.dart';
 
 class ServerException implements Exception {}
 
@@ -16,7 +16,7 @@ class NoInternetException implements Exception {
       globalMessengerKey.currentState!
           .showSnackBar(SnackBar(content: Text(message)));
     }
-    this._message = message;
+    _message = message;
   }
 
   @override

@@ -1,7 +1,13 @@
+import 'package:digi_ration_shop_owner_application/profile_screen/core/utils/image_constant.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/core/utils/size_utils.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/localization/app_localization.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/theme/theme_helper.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/widgets/custom_image_view.dart';
+
 import 'bloc/dropdown_profile_bloc.dart';
 import 'models/dropdown_profile_model.dart';
 import 'package:flutter/material.dart';
-import 'package:profilescreen/core/app_export.dart';
+import 'package:digi_ration_shop_owner_application/profile_screen/core/app_export.dart';
 
 class DropdownProfileScreen extends StatelessWidget {
   const DropdownProfileScreen({Key? key})
@@ -12,10 +18,9 @@ class DropdownProfileScreen extends StatelessWidget {
   static Widget builder(BuildContext context) {
     return BlocProvider<DropdownProfileBloc>(
       create: (context) => DropdownProfileBloc(DropdownProfileState(
-        dropdownProfileModelObj: DropdownProfileModel(),
-      ))
-        ..add(DropdownProfileInitialEvent()),
-      child: DropdownProfileScreen(),
+        dropdownProfileModelObj: const DropdownProfileModel(),
+      )),
+      child: const DropdownProfileScreen(),
     );
   }
 
